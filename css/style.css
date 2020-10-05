@@ -1,0 +1,272 @@
+/* Geral */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+  color: #555;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Modal */
+.modal {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 999;
+  animation: modal 8s;
+  transform: scale(0);
+}
+
+.modal .card {
+  border-top: 5px solid rgb(140, 55, 219);
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #f1f1f1;
+  background-color: rgba(240, 240, 240, .9);
+}
+
+@keyframes modal {
+  0% {transform: scale(.6);}
+  10% {transform: scale(1);}
+  90% {transform: scale(1);}
+  100% {transform: scale(.6);}
+}
+
+/* Navbar */
+
+/* Classe adicionada com javascript */
+.nav-scroll-bttm {
+  background-color: white;
+}
+
+.nav-scroll-bttm a {
+  background: rgb(140, 55, 219);
+}
+
+/* Classe adicionada com javascript */
+.nav-scroll-top {
+  background-color: purple;
+  background-image: linear-gradient(to right, rgb(140, 0, 255) 10%, rgb(177, 44, 204) 80%);
+}
+
+nav {
+  padding: 10px 0;
+  width: 100%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.l-hidden {
+  display: none;
+}
+
+nav a:hover {
+  background: rgb(167, 55, 219);
+}
+
+.nav-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgb(140, 55, 219);
+}
+
+nav .right {
+  float: right;
+}
+
+
+/* Header */
+header {
+  background: url('../imagens/galaxia.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 500px;
+  padding: 100px 0 0;
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+header p {
+  width: 50%;
+}
+
+header h1 {
+  text-transform: uppercase;
+}
+
+blockquote {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 100;
+  color: #aaa;
+}
+
+header .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .8);
+  padding: 5px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+/* Main */
+.row::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.aside, .main {
+  float: left;
+  padding: 0 10px;
+}
+
+.aside {
+  width: 25%;
+}
+
+.main {
+  width: 75%;
+}
+
+.card {
+  padding: 1.5em 2em;
+  margin: 1.5em 0;
+  border-radius: 1em;
+  background-color: white;
+  box-shadow: 0 0 .75em .2em rgba(0, 0, 0, 0.1);
+}
+
+.card h2, .card h3 {
+  text-transform: uppercase;
+}
+
+.card-btn {
+  outline: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(128, 32, 206);
+  padding: 15px 20px;
+}
+
+.card-btn:hover {
+  opacity: .5;
+}
+
+/* Listas */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list li {
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.list li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.list li:hover {
+  background-color: #f1f1f1;
+}
+
+.tags * {
+  background: black;
+  color: white;
+  padding: 5px;
+  margin: 1px 1px 0 0;
+  display: inline-block;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Media Query */
+@media (max-width: 900px) {
+  .aside {
+    width: 35%;
+  }
+  .main {
+    width: 65%;
+  }
+}
+
+@media (max-width: 700px) {
+  .aside, .main {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  header p {
+    width: 80%;
+  }
+
+  .m-hidden {
+    display: none;
+  }
+
+  .l-hidden {
+    display: inline-block;
+  }
+
+  .respnv a {
+    display: block;
+  }
+
+  .respnv .bars {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .respnv .right {
+    float: none;
+  }
+
+}
