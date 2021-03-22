@@ -116,22 +116,30 @@ nav .right {
 header {
   background: url('../imagens/galaxia-min.jpg') no-repeat center center;
   background-size: cover;
-  color: white;
   height: 500px;
   padding: 100px 0 50px;
-  font-weight: bold;
-  font-size: 1.1em;
-  letter-spacing: 2px;
   position: relative;
+  color: white;
 }
 
 header p {
+  letter-spacing: 2px;
   width: 50%;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-header h1 {
+header .title {
   text-transform: uppercase;
+  font-size: 2.1em;
+}
+
+header .subtitle {
+  font-size: 1.3em;
+}
+
+header .subtitle,
+header .title {
+  font-weight: bold;
 }
 
 blockquote {
@@ -191,7 +199,6 @@ header .caption {
 
 .card p {
   letter-spacing: 1px;
-  /* font-family: 'Noto Sans JP', sans-serif; */
   line-height: 1.8;
   font-size: 17px;
 }
@@ -203,6 +210,7 @@ header .caption {
   text-decoration: none;
   background-color: rgb(128, 32, 206);
   padding: 15px 20px;
+  display: inline-block;
 }
 
 .card-btn:hover {
@@ -264,8 +272,25 @@ footer {
     padding: 0;
   }
 
+  p {
+    line-height: 1.6 !important;
+  }
+
   header p {
     width: 80%;
+    font-size: small;
+  }
+
+  header .title {
+    font-size: 1.6em;
+  }
+
+  header .subtitle {
+    font-size: 1.1em;
+  }
+
+  .card {
+    padding: 1rem 1.2rem;
   }
 
   .m-hidden {
