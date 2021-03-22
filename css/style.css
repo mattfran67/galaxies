@@ -6,12 +6,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Lato";
+  font-family: 'Montserrat', sans-serif;
   color: #555;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  padding: 5px 0;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
 }
 
 .content {
@@ -107,19 +114,20 @@ nav .right {
 
 /* Header */
 header {
-  background: url('../imagens/galaxia.jpg') no-repeat center center;
+  background: url('../imagens/galaxia-min.jpg') no-repeat center center;
   background-size: cover;
   color: white;
   height: 500px;
-  padding: 100px 0 0;
+  padding: 100px 0 50px;
   font-weight: bold;
   font-size: 1.1em;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   position: relative;
 }
 
 header p {
   width: 50%;
+  line-height: 1.7;
 }
 
 header h1 {
@@ -171,8 +179,21 @@ header .caption {
   box-shadow: 0 0 .75em .2em rgba(0, 0, 0, 0.1);
 }
 
+.card .card-header {
+  border-bottom: 1px solid #ddd;
+  color: #888;
+}
+
 .card h2, .card h3 {
   text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card p {
+  letter-spacing: 1px;
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  line-height: 1.8;
+  font-size: 17px;
 }
 
 .card-btn {
